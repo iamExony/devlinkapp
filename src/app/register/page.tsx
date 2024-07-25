@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebaseConfig';
+import Image from 'next/image';
 
 const CreateAccountPage = () => {
   const [email, setEmail] = useState('');
@@ -51,7 +52,7 @@ const CreateAccountPage = () => {
     <div className="bg-gray-100 flex justify-center items-center min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <div className="flex justify-center mb-6">
-          <img src="/logo.png" alt="Devlinks Logo" className="h-12" />
+          <Image width={100} height={100} src="/logo.png" alt="Devlinks Logo" className="h-12" />
         </div>
         <h1 className="text-2xl font-semibold mb-2">Create Account</h1>
         <p className="text-gray-600 mb-6">Add your details below to create a new account</p>

@@ -6,7 +6,7 @@ import { auth } from '../../firebaseConfig';
 import { useEffect } from 'react';
 
 const withAuth = (Component) => {
-  return (props) => {
+  const AuthenticatedComponent = (props) => {
     const [user, loading] = useAuthState(auth);
     const router = useRouter();
 
@@ -22,6 +22,10 @@ const withAuth = (Component) => {
 
     return <Component {...props} />;
   };
+
+  AuthenticatedComponent.displayName = `withAuth(${Component.displayName || Component.name || 'Component'})`;
+
+  return AuthenticatedComponent;
 };
 
 export default withAuth;

@@ -98,10 +98,10 @@ const Links: React.FC = () => {
       {links.length === 0 && (
         <div className="mt-8 p-6 bg-gray-100 rounded-md w-full text-center">
           <Icon icon="mdi:cellphone-link" className="mx-auto mb-4 text-purple-500" width="40" height="40" />
-          <h2 className="text-xl font-bold">Let's get you started</h2>
+          <h2 className="text-xl font-bold">Let &apos;s get you started</h2>
           <p className="text-gray-500 mt-2">
-            Use the "Add new link" button to get started. Once you have more than one link, you can reorder and edit them.
-            We're here to help you share your profiles with everyone!
+            Use the &quot;Add new link&quot; button to get started. Once you have more than one link, you can reorder and edit them.
+            We &apos;re here to help you share your profiles with everyone!
           </p>
         </div>
       )}
