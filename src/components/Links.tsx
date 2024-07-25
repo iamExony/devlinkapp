@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { collection, addDoc } from 'firebase/firestore';
-import { firestore } from '../../firebaseConfig'; // Ensure correct import path
+import { firestore } from '../../firebaseConfig'; 
 
 const platforms = [
   { name: 'GitHub', icon: 'mdi:github', pattern: /https:\/\/(www\.)?github\.com\/.+/ },
@@ -32,14 +32,14 @@ const Links: React.FC = () => {
   const handlePlatformChange = (index: number, platform: string) => {
     const newLinks = [...links];
     newLinks[index].platform = platform;
-    newLinks[index].error = ''; // Reset error message on change
+    newLinks[index].error = ''; 
     setLinks(newLinks);
   };
 
   const handleUrlChange = (index: number, url: string) => {
     const newLinks = [...links];
     newLinks[index].url = url;
-    newLinks[index].error = ''; // Reset error message on change
+    newLinks[index].error = ''; 
     setLinks(newLinks);
   };
 
