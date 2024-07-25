@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest) {
 
     if (!token) {
       const url = request.nextUrl.clone();
-      url.pathname = '/auth'; // Fix the missing quote here
+      url.pathname = '/login'; // Fix the missing quote here
       return NextResponse.redirect(url);
     }
 
@@ -19,7 +19,7 @@ export async function middleware(request: NextRequest) {
       await verifyIdToken(token);
     } catch (error) {
       const url = request.nextUrl.clone();
-      url.pathname = '/auth';
+      url.pathname = '/login';
       return NextResponse.redirect(url);
     }
   }

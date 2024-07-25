@@ -41,7 +41,7 @@ const CreateAccountPage = () => {
       try {
         await createUserWithEmailAndPassword(auth, email, password);
         setSuccessMessage('Account created successfully!');
-        router.push('/auth'); // Redirect to the login page
+        router.push('/login'); // Redirect to the login page
       } catch (error) {
         setErrors({ email: '', password: '', confirmPassword: 'Failed to create account. Please try again.' });
       }
@@ -137,7 +137,7 @@ const CreateAccountPage = () => {
           </div>
         </form>
         <p className="mt-6 text-center text-gray-600">
-          Already have an account? <a href="#" className="text-indigo-600 hover:text-indigo-500">Login</a>
+          Already have an account? <a href="/login" className="text-indigo-600 hover:text-indigo-500">Login</a>
         </p>
       </div>
     </div>
