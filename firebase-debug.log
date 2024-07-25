@@ -1,0 +1,21 @@
+[debug] [2024-07-24T22:41:31.020Z] ----------------------------------------------------------------------
+[debug] [2024-07-24T22:41:31.024Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bondservant RM11\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-24T22:41:31.025Z] CLI Version:   13.14.1
+[debug] [2024-07-24T22:41:31.025Z] Platform:      win32
+[debug] [2024-07-24T22:41:31.026Z] Node Version:  v20.15.0
+[debug] [2024-07-24T22:41:31.026Z] Time:          Wed Jul 24 2024 23:41:31 GMT+0100 (West Africa Standard Time)
+[debug] [2024-07-24T22:41:31.026Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-24T22:41:31.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-24T22:41:31.048Z] > authorizing via signed-in user (ezeonyemaechianthony@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Bondservant RM11\Videos\devlink-app
+
