@@ -4,9 +4,16 @@ import { useRouter } from 'next/navigation';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebaseConfig';
 import { useEffect } from 'react';
+import { ComponentType, FC } from 'react';
 
-const withAuth = (Component) => {
-  const AuthenticatedComponent = (props) => {
+// Define the type for the props of the wrapped component
+type WithAuthProps = {
+  // Add any additional props here if needed
+};
+
+// Define the higher-order component with a generic type for the wrapped component's props
+const withAuth = <P extends WithAuthProps>(Component: ComponentType<P>): FC<P> => {
+  const AuthenticatedComponent: FC<P> = (props) => {
     const [user, loading] = useAuthState(auth);
     const router = useRouter();
 

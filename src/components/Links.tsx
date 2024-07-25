@@ -132,7 +132,7 @@ const Links: React.FC = () => {
               </select>
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 {link.platform && (
-                  <Icon icon={platforms.find((p) => p.name === link.platform)?.icon} className="text-gray-500" />
+                  <Icon icon={platforms.find((p) => p.name === link.platform)?.icon || 'mdi:question-mark'} className="text-gray-500" />
                 )}
               </div>
             </div>

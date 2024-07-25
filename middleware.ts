@@ -1,4 +1,3 @@
-// middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { verifyIdToken } from './lib/firebaseAdmin';
@@ -7,11 +6,12 @@ export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (pathname === '/dashboard') {
-    const token = request.cookies.get('authToken');
+    const tokenCookie = request.cookies.get('authToken');
+    const token = tokenCookie?.value; // Extract the string value from the cookie
 
     if (!token) {
       const url = request.nextUrl.clone();
-      url.pathname = '/';
+      url.pathname = '/auth'; // Fix the missing quote here
       return NextResponse.redirect(url);
     }
 
@@ -19,7 +19,7 @@ export async function middleware(request: NextRequest) {
       await verifyIdToken(token);
     } catch (error) {
       const url = request.nextUrl.clone();
-      url.pathname = '/';
+      url.pathname = '/auth';
       return NextResponse.redirect(url);
     }
   }
